@@ -1,4 +1,14 @@
-<h1>{{info.title}}</h1>
-<p>{{info.description}}</p>
-<p>{{info.dueDate}}</p>
-<p>hey</p>
+<div class="card card-container">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img [src]="imageUrl" [alt]="title"/>
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media-content">
+      <p class="title is-4">{{ title }}</p>
+      <p class="subtitle is-6">{{ description }}</p>
+    </div>
+    <div class="content">{{ dueDate }}</div>
+  </div>
+</div>

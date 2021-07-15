@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+// CONSTANTS
+import {INFO} from '../constants'
+
+// TYPES
+import {Info} from "../constants/types";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cards';
+  info: Info[] = INFO
+  isActive: string = ""
+  modalTitle: string = ''
+  modalDescription = ""
+
+  bodyElement = document.getElementsByName("body")
+
+  onModalOpen(title: string, description: string) {
+    this.isActive = 'is-active'
+    this.modalTitle = title;
+    this.modalDescription = description;
+    // this.bodyElement.style = {overflow: "hidden"}
+  }
+
+  onCloseModal() {
+    this.isActive = ""
+  }
 }

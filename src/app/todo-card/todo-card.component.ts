@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Info} from "./types";
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-todo-card',
@@ -10,11 +10,10 @@ import {Info} from "./types";
 export class TodoCardComponent implements OnInit {
 
   constructor() { }
-  info: Info = {
-    title: "Go home",
-    description: "Before 10 PM",
-    dueDate: "12/07/2021"
-  }
+  @Input() title = '';
+  @Input() imageUrl = '';
+  @Input() description = '';
+  @Input() dueDate = '';
   ngOnInit(): void {
   }
 
