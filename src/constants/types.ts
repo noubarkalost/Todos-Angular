@@ -2,5 +2,6 @@ export interface Info {
   title: string,
   imageUrl: string,
   description: string,
-  dueDate: string
+  dueDate: string,
+  check: boolean
 }
