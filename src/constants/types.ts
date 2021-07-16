@@ -3,5 +3,4 @@ export interface Info {
   imageUrl: string,
   description: string,
   dueDate: string,
-  check: boolean
 }

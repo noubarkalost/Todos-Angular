@@ -10,5 +10,7 @@
       <p class="subtitle is-6">{{ description }}</p>
     </div>
     <div class="content">{{ dueDate }}</div>
+    <button class="button is-rounded" [ngClass]="todoStatus" (click)="isDone($event)">{{check}}</button>
   </div>
+
 </div>
