@@ -17,6 +17,16 @@
 .card-container:hover {
   transform: scaleX(1.02);
 }
+
+.text {
+  text-decoration: none;
+  transition: all .3s linear;
+}
+
+.text-todo-done {
+  text-decoration: line-through;
+}
+
 @media only screen and (max-width: 1330px) {
   .card-container {
     width: 48%;

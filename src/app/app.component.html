@@ -1,26 +1,31 @@
 <div class="container">
   <app-todo-card class="card-container"
-    *ngFor="let todo of info; let i = index"
-    (click)="onModalOpen(todo.title, todo.description)"
-    [title]="todo.title"
-    [imageUrl]="todo.imageUrl"
-    [description]="todo.description"
-    [dueDate]="todo.dueDate">
+                 *ngFor="let todo of info; let i = index"
+                 (click)="onModalOpen(todo.title, todo.description)"
+                 [title]="todo.title"
+                 [imageUrl]="todo.imageUrl"
+                 [description]="todo.description"
+                 [dueDate]="todo.dueDate">
   </app-todo-card>
 </div>
 <div class="modal" [class]="isActive">
   <div class="modal-background" (click)="onCloseModal()"></div>
   <div class="modal-content">
     <div class="card">
-    <div class="card-content">
-      <div class="content">
-        <h3>{{modalTitle}}</h3>
-        <br>
-        <p>{{modalDescription}}</p>
-        <br>
-        <h1>Please get your work done :)</h1>
+      <div class="card-content">
+        <div class="content">
+          <h3 class="text" [class]="doneTodo" style="margin: 0 5px 0 0">{{modalTitle}}</h3>
+          <br>
+          <p class="text" [class]="doneTodo">{{modalDescription}}</p>
+          <br>
+          <div style="display: flex; align-items: center">
+            <label class="checkbox" style="margin-right: 10px" (change)="onCheckboxChange($event)">
+              <input type="checkbox">
+              {{!doneTodo.length ? "Please get your work done :) " : "Hora you have done it"}}
+            </label>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   </div>
   <button class="modal-close is-large" aria-label="close" (click)="onCloseModal()"></button>

@@ -16,8 +16,7 @@ export class AppComponent {
   isActive: string = ""
   modalTitle: string = ''
   modalDescription = ""
-
-  bodyElement = document.getElementsByName("body")
+  doneTodo = ""
 
   onModalOpen(title: string, description: string) {
     this.isActive = 'is-active'
@@ -28,5 +27,13 @@ export class AppComponent {
 
   onCloseModal() {
     this.isActive = ""
+  }
+  onCheckboxChange(e: any) {
+    const {checked} = e.target
+    if(checked) {
+      this.doneTodo = "text-todo-done"
+    } else {
+      this.doneTodo = ""
+    }
   }
 }
