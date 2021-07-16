@@ -1,1 +1,12 @@
-<app-todo-card></app-todo-card>
+
+<div class="container">
+  <app-todo-card class="card-container"
+                 *ngFor="let todo of info; let i = index"
+                 [title]="todo.title"
+                 [imageUrl]="todo.imageUrl"
+                 [description]="todo.description"
+                 [dueDate]="todo.dueDate"
+                 >
+  </app-todo-card>
+
+</div>

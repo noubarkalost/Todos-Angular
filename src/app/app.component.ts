@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+// CONSTANTS
+import {INFO} from '../constants'
+
+// TYPES
+import {Info} from "../constants/types";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cards';
+  info: Info[] = INFO
+  isActive: string = ""
+
 }

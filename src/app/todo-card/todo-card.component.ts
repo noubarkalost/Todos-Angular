@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Info} from "./types";
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-todo-card',
@@ -10,12 +10,29 @@ import {Info} from "./types";
 export class TodoCardComponent implements OnInit {
 
   constructor() { }
-  info: Info = {
-    title: "Go home",
-    description: "Before 10 PM",
-    dueDate: "12/07/2021"
-  }
+  todoStatus:string = "is-danger"
+  check: string = "Pending"
+  @Input() title = '';
+  @Input() imageUrl = '';
+  @Input() description = '';
+  @Input() dueDate = '';
+
   ngOnInit(): void {
   }
+  isDone(e:any){
+    const clicked = e.target
+    if(clicked && this.check === "Pending"){
+      this.check = "Done"
+      this.todoStatus = "is-success"
+      console.log(e.target)
+    }
+    else{
+      this.check = "Pending"
+      this.todoStatus = "is-danger"
+
+
+    }
+  }
+
 
 }
