@@ -98,6 +98,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+            "builder": "angular-cli-ghpages:deploy",
+            "options": {
+              "baseHref": "https://noubarkalost.github.io/todos-homework/",
+              "name": "todos-homework",
+              "email": "noubar.kaloust@gmail.com"
+            }
         }
       }
     }
