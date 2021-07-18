@@ -19,12 +19,14 @@ export class AppComponent {
   isActive: string = ""
   addCard(){
   this.num += 1
+    this.removeIsDisabled = false
     if(this.num === 10){
       this.addIsDisabled = true
     }
   }
   removeCard(){
     this.num -= 1
+    this.addIsDisabled = false
     if(this.num === 0){
       this.removeIsDisabled = true
     }
