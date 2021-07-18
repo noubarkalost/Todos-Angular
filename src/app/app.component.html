@@ -1,12 +1,14 @@
 
 <div class="container">
-  <app-todo-card class="card-container"
-                 *ngFor="let todo of info; let i = index"
+  <app-todo-card  class="card-container"
+                 *ngFor="let todo of info | slice:0:num"
                  [title]="todo.title"
                  [imageUrl]="todo.imageUrl"
                  [description]="todo.description"
                  [dueDate]="todo.dueDate"
-                 >
+                 >s
   </app-todo-card>
+  <button [disabled]="addIsDisabled" (click)="addCard()"> Add Todo</button>
+  <button [disabled]="removeIsDisabled"  (click)="removeCard()"> Remove Todo</button>
 
 </div>

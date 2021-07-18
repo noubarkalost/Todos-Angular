@@ -12,7 +12,22 @@ import {Info} from "../constants/types";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  removeIsDisabled: boolean = false
+  addIsDisabled : boolean = false
+  num: number = 1
   info: Info[] = INFO
   isActive: string = ""
+  addCard(){
+  this.num += 1
+    if(this.num === 10){
+      this.addIsDisabled = true
+    }
+  }
+  removeCard(){
+    this.num -= 1
+    if(this.num === 0){
+      this.removeIsDisabled = true
+    }
+  }
 
 }
