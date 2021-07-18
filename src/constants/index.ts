@@ -23,30 +23,30 @@ export const INFO: Info[] = [{
 
   },
   {
-    title: "Learn Angular",
-    imageUrl: "assets/angular.jpg",
-    description: "Find free courses",
+    title: "Cook Some Food",
+    imageUrl: "assets/Cooking.png",
+    description: "Use Previously Bought Grocery",
     dueDate: "26/07/2021"
 
   },
   {
-    title: "Learn Angular",
-    imageUrl: "assets/angular.jpg",
-    description: "Find free courses",
+    title: "Take Your Kitten For a Walk",
+    imageUrl: "assets/CatWalk.jpg",
+    description: "Don't Forget To Have Some Treatments Inside Your Pocket",
     dueDate: "26/07/2021"
 
   },
   {
-    title: "Learn Angular",
-    imageUrl: "assets/angular.jpg",
-    description: "Find free courses",
+    title: "Play Some Video Games",
+    imageUrl: "assets/videoGame.jpg",
+    description: "You Can Invite Your GF To Play too ;)",
     dueDate: "26/07/2021"
 
   },
   {
-    title: "Learn Angular",
-    imageUrl: "assets/angular.jpg",
-    description: "Find free courses",
+    title: "Watch a Movie",
+    imageUrl: "assets/movie.jpg",
+    description: "Search For Horror Movie ",
     dueDate: "26/07/2021"
 
   },

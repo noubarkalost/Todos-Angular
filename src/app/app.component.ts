@@ -12,9 +12,10 @@ import {Info} from "../constants/types";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  removeIsDisabled: boolean = false
+  removeIsDisabled: boolean = true
   addIsDisabled : boolean = false
-  num: number = 1
+  originalNum: number = 1
+  num: number = this.originalNum
   info: Info[] = INFO
   isActive: string = ""
   addCard(){
@@ -27,9 +28,17 @@ export class AppComponent {
   removeCard(){
     this.num -= 1
     this.addIsDisabled = false
-    if(this.num === 0){
+    if(this.num === this.originalNum){
       this.removeIsDisabled = true
     }
   }
 
+  resetCards(){
+    this.num = this.originalNum
+    if(this.num === this.originalNum){
+      this.removeIsDisabled = true
+
+    }
+    this.addIsDisabled = false
+  }
 }
