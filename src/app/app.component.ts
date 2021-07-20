@@ -12,6 +12,7 @@ import {Info} from "../constants/types";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  resetIsDisabled: boolean = true
   removeIsDisabled: boolean = true
   addIsDisabled : boolean = false
   originalNum: number = 1
@@ -21,6 +22,7 @@ export class AppComponent {
   addCard(){
   this.num += 1
     this.removeIsDisabled = false
+    this.resetIsDisabled = false
     if(this.num === 10){
       this.addIsDisabled = true
     }
@@ -29,6 +31,7 @@ export class AppComponent {
     this.num -= 1
     this.addIsDisabled = false
     if(this.num === this.originalNum){
+      this.resetIsDisabled = true
       this.removeIsDisabled = true
     }
   }
@@ -37,6 +40,7 @@ export class AppComponent {
     this.num = this.originalNum
     if(this.num === this.originalNum){
       this.removeIsDisabled = true
+      this.addIsDisabled = true
 
     }
     this.addIsDisabled = false

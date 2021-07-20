@@ -19,4 +19,4 @@
 
   <button class="button is-primary is-rounded next-button"  [disabled]="addIsDisabled" (click)="addCard()"> Add Card</button>
   <button class="button is-danger is-rounded prev-button"  [disabled]="removeIsDisabled"  (click)="removeCard()"> Remove Card</button>
-  <button class="button is-link is-rounded reset-button"   (click)="resetCards()"> Reset Card</button>
+  <button class="button is-link is-rounded reset-button"  [disabled]="resetIsDisabled" (click)="resetCards()"> Reset Card</button>
