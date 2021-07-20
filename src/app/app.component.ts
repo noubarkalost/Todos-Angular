@@ -14,31 +14,33 @@ import {Info} from "../constants/types";
 export class AppComponent {
   resetIsDisabled: boolean = true
   removeIsDisabled: boolean = true
-  addIsDisabled : boolean = false
+  addIsDisabled: boolean = false
   originalNum: number = 1
   num: number = this.originalNum
   info: Info[] = INFO
   isActive: string = ""
-  addCard(){
-  this.num += 1
+
+  addCard() {
+    this.num += 1
     this.removeIsDisabled = false
     this.resetIsDisabled = false
-    if(this.num === 10){
+    if (this.num === 10) {
       this.addIsDisabled = true
     }
   }
-  removeCard(){
+
+  removeCard() {
     this.num -= 1
     this.addIsDisabled = false
-    if(this.num === this.originalNum){
+    if (this.num === this.originalNum) {
       this.resetIsDisabled = true
       this.removeIsDisabled = true
     }
   }
 
-  resetCards(){
+  resetCards() {
     this.num = this.originalNum
-    if(this.num === this.originalNum){
+    if (this.num === this.originalNum) {
       this.removeIsDisabled = true
       this.addIsDisabled = true
 

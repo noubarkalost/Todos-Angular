@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 
 @Component({
@@ -9,24 +9,25 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class TodoCardComponent implements OnInit {
 
-  constructor() { }
-  todoStatus:string = "is-danger"
+  constructor() {
+  }
+
+  todoStatus: string = "is-danger"
   check: string = "Pending"
-  @Input() title = '';
-  @Input() imageUrl = '';
-  @Input() description = '';
-  @Input() dueDate = '';
+  @Input() title: string = '';
+  @Input() imageUrl: string = '';
+  @Input() description: string = '';
+  @Input() dueDate: string = '';
 
   ngOnInit(): void {
   }
-  isDone(e:any){
-    const clicked = e.target
-    if(clicked && this.check === "Pending"){
+
+  isDone(e: Event) {
+    const clicked = (e.target as HTMLElement)
+    if (clicked && this.check === "Pending") {
       this.check = "Done"
       this.todoStatus = "is-success"
-      console.log(e.target)
-    }
-    else{
+    } else {
       this.check = "Pending"
       this.todoStatus = "is-danger"
 
